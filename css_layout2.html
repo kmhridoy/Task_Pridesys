@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Website Layout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.header {
+			background-color: lightgray;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.topnav {
+			background-color: black;
+			overflow: hidden;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			padding: 10px 10px;
+		}
+
+		.topnav a:hover {
+			background-color: gray;
+			color: black;
+		}
+
+		.column {
+			float: left;
+			padding: 10px;
+		}
+
+		.column.side {
+			width: 25%;
+		}
+
+		.column.middle {
+			width: 50%;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		@media(max-width: 600px) {
+			.column.side, .columns.middle {
+				width: 100%;
+			}
+		}
+
+		.footer {
+			text-align: center;
+			color: white;
+			padding: 1px;
+			background-color: black;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="header">
+		<h1>Header</h1>
+		<p>Resize the browser window to see the resposive effect.</p>
+	</div>
+
+	<div class="topnav">
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</div>
+
+	<div class="row">
+		<div class="column side">
+			<h2>Side</h2>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+		</div>
+
+		<div class="column middle">
+			<h2>Main Content</h2>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+
+		<div class="column side">
+    		<h2>Side</h2>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  		</div>
+	</div>
+
+	<div class="footer">
+		<p>This is footer</p>
+	</div>
+</body>
+</html>

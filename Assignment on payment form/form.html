@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Form</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="myScript.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <div class="tophead"></div>
+  <div class="container">
+    <div>
+      <h1>LORD MUN 2: Fiction Conclave, Delegate Application Form</h1>
+      <p class="para1">
+      Late Delegate registration fee is: 3500BDT(For National applicants) or $40 US Dollars (for International applicants without accommodation ).<br>
+      We'll let you know the payment procedure once you're selected.<br><br>
+      For any query please don't hesitate to Call at +8801822222234, 01623760949, 01914639073  or mail us at <a href="mailto:houseydbd@gmail.com">houseydbd@gmail.com</a> <br>
+      Event page: <a href="https://www.facebook.com/events/1212474668820578">https://www.facebook.com/events/1212474668820578</a>
+      </p>
+    </div>
+    
+      <form name="myForm" action="myScript.js" onsubmit="return validateForm()" method="post">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Full Name</h3>
+            <input class="underline" type="text" name="name" placeholder="Your answer" required>
+            </div>
+            <div class="col-sm-6">
+              <h3>E-Mail</h3>
+              <input class="underline" type="E-Mail" name="E-Mail" placeholder="Your answer" required>
+            </div>
+        </div> 
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Phone Number</h3>
+            <input class="underline" type="text" name="number" placeholder="Your answer" required>
+          </div>
+          <div class="col-sm-6">
+            <h3>Facebook profile link</h3>
+            <input class="underline" type="text" name="fblink" placeholder="Your answer" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Date of Birth</h3>
+              Birthday:
+              <input class="date_underline" type="date" name="bday" required>
+          </div>
+          <div class="col-sm-6">
+            <h3>Institution ?</h3>
+            <input class="underline" type="text" name="Institution" placeholder="Your answer" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Class/ Grade/ University Year of study</h3>
+            <p>Example: 10th Grade/ 1st year/ 3rdSemester</p>
+            <input class="underline" type="text" name="year" placeholder="Your answer" required>
+          </div>
+          <div class="col-sm-6">
+            <h3>Course of Study</h3>
+            <input class="underline" type="text" name="course" placeholder="Your answer">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Previous Model UN Experience</h3>
+            <p>If yes, please mention the name, conference year, your position and any awards won. If you don't have any previous experience please write N/A</p>
+            <input class="underline" type="text" name="Experience" placeholder="Your answer" required>
+          </div>
+          <div class="col-sm-6">
+            <h3>Committee Preference</h3>
+              <div class="committe">
+                <select class="form-control" required>
+                  <option></option>
+                  <option> Game of Throne</option>
+                  <option> Marvel-DC</option>
+                  <option> Harry Potter</option>
+                  <option> International Cricket Club Alliance</option>
+                  <option> Continues Crisis Committee</option>
+                </select>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Character/country/Club Preference </h3>
+            <p>Please list at least 5 Character /Club/ Country as your preference. Just putting down the name of the Character /Club/ Country is enough</p>
+            <input class="underline" type="text" name="club" placeholder="Your answer" required>
+          </div>
+          <div class="col-sm-6">
+            <h3>Do you Need Accommodation</h3>
+              <input type="radio" name="gender" value="yes" required> Yes<br>
+              <input type="radio" name="gender" value="no" required> No<br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>What is your preferred mode of payment?</h3>
+              <input type="checkbox" name="payment1" value="spot" required> Spot Registration<br>
+              <input type="checkbox" name="payment2" value="Bkash" required> Mobile banking<br>
+              <input type="checkbox" name="payment3" value="International" required> Bank/International Payment 
+          </div>
+          <div class="col-sm-6">
+            <h3>Do you belong to any MUN society/club or organization ?</h3>
+            <p>If yes, please provide the details with your designation. Example: General Secretary at XYZ Model UN Club etc.</p>
+            <input class="underline" class="underline" type="text" name="organization" placeholder="Your answer">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Are you willing to perform at The LORD MUN Socials Night/ Cultural Night?</h3>
+            <p>If yes, please mention what would be your performance</p>
+            <textarea class="comment" placeholder="Your answer"></textarea>
+          </div>
+          <div class="col-sm-6">
+            <h3>Emergency Contact Number (Gradian)</h3>
+            <input class="underline" type="text" name="number" placeholder="Your answer" required="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Please confirm that all the information you've put are true and valid. We'll keep your information confidential and will only use for the intended purpose. By submitting this form you're accepting that we'll be allowed to use your information and once selected, you agree to maintain/adhere to the conference guideline/general regulation as instructed by The LORD MUN'17 Secretariat</h3>
+            <input type="checkbox" name="yesagree" value="agree" required> Yes, I AGREE
+          </div> <br>
+        </div>
+
+        <input class="btn btn-primary" type="submit" name="submit">
+
+      </form>
+  </div>
+</body>
+</html>

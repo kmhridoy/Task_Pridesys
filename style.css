@@ -1,0 +1,50 @@
+.overflow {
+	background-color: lightgray;
+	width: 200px;
+	height: 100px;
+	border: 1px dotted black;
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+
+.img5 {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+.imgcle {
+	float: right;
+}
+div {
+	border: 3px solid green;
+	padding: 5px;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.hov {
+	display: none;
+	background-color: yellow;
+	padding: 20px;
+}
+
+div:hover p {
+	display: block;
+}
+
+p:first-child i {
+	color: blue;
+}
+
+q:lang(no) {
+	quotes: "*" "*";
+}
+
+p::first-letter {
+	color: red;
+	font-size: xx-large;
+}

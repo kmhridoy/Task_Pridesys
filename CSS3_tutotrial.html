@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3</title>
+	<style>
+		.borderimg {
+			border: 10px solid transparent;
+			padding: 15pxx;
+			border-image: url(border.png) 20% round;
+		}
+
+		.example1 {
+			background-image: url(img6.jpg), url(img5.jpg);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+			padding: 15px;
+		}
+
+		.example2 {
+			border: 1px solid black;
+			background-image: url(img5.jpg);
+			background-repeat: no-repeat;
+			padding: 15px;
+			background-size: cover;
+			width: 250px;
+			height: 250px;
+		}
+
+		.grad1 {
+			height: 200px;
+			text-align: center;
+			margin: auto;
+			color:gray;
+			font-weight: bold;
+			font-size: 40px;
+			background: repeating-linear-gradient( to bottom right, red, yellow 10%, green 20%);
+		}
+
+		.grad2 {
+			height: 200px;
+			text-align: center;
+			margin: auto;
+			color:gray;
+			font-weight: bold;
+			font-size: 40px;
+			background: radial-gradient(circle, red, yellow, green);
+		}
+
+		.shadowb {
+			height: 150px;
+			padding: 15px;
+			background-color: yellow;
+			box-shadow: 5px 5px 10px gray;
+		}
+
+		.card {
+			width: 250px;
+			text-align: center;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		.hea {
+    		background-color: #4CAF50;
+    		color: white;
+    		padding: 10px;
+    		font-size: 40px;
+		}
+
+		.container {
+			padding: 10px;
+		}
+
+		.mydiv {
+			width: 500px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid black;
+		}
+
+		.mydiv1 {
+			width: 500px;
+			height: 100px;
+			transform: rotateZ(90deg);
+			background-color: yellow;
+			border: 1px solid black;
+		}
+
+		.tra {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background-color: red;
+			animation-name: example;
+			animation-duration: 4s;
+			animation-direction: alternate;
+			animation-iteration-count: 2;
+			transition: width 2s, height 2s transform 1s;
+		}
+
+		.tra:hover {
+			width: 300px;
+			height: 300px;
+			transform: rotate(180deg);
+		}
+
+		@keyframes example {
+    		0%   {background-color:red; left:0px; top:0px;}
+    		25%  {background-color:yellow; left:200px; top:0px;}
+    		50%  {background-color:blue; left:200px; top:200px;}
+    		75%  {background-color:green; left:0px; top:200px;}
+    		100% {background-color:red; left:0px; top:0px;}
+		}
+
+		#div1 {animation-timing-function: linear;}
+		#div2 {animation-timing-function: ease;}
+		#div3 {animation-timing-function: ease-in;}
+		#div4 {animation-timing-function: ease-out;}
+		#div5 {animation-timing-function: ease-in-out;}
+
+	</style>
+</head>
+<body>
+	<p>The border-image property specifies an image to be used as the border around an element:</p>
+	<p class="borderimg">Here, the middle sections of the image are repeated to create the border.</p>
+
+	<div class="example1">
+		<h1>Lorem Ipsum Dolor</h1>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	</div><br>
+
+	<p>Original background-image:</p>
+	<div class="example2">
+		<h2>Lorem Ipsum Dolor</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+	<h3>Linear Gradient - Top to Bottom</h3>
+	<p>This linear gradient starts at the top. It starts red, transitioning to yellow:</p>
+
+	<div class="grad1">Gradient Background</div><br><br>
+	<div class="grad2">Gradient Background</div><br><br>
+	<div class="shadowb">This is a div element with a box-shadow</div><br><br>
+
+	<h2>Cards</h2>
+	<div class="card">
+  		<div class="hea">
+    		<h1>1</h1>
+  		</div>
+
+  		<div class="container">
+    		<p>January 1, 2016</p>
+  		</div>
+	</div> <br><br>
+
+	<div class="mydiv">
+		This a normal div element.
+	</div>
+
+	<div class="mydiv1">
+		The rotate() method rotates an element clockwise or counter-clockwise. This div element is rotated clockwise 20 degrees.
+	</div> <br><br><br><br><br><br><br><br><br><br><br>
+
+	<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+	<div class="tra"></div>
+
+	<p>Hover over the div element above, to see the transition effect.</p>
+	<br><br>
+</body>
+</html>

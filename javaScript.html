@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script type="text/javascript" src="myScript.js"></script>
+</head>
+<body>
+	<p id="demo1">JavaScript can change HTML content</p>
+	<button type="button" onclick='myFunction()'>Click Me!</button> <br><br>
+
+	<button onclick="document.getElementById('myImage').src='lighton.gif'">Turn on</button>
+
+	<img src="lightoff.jpg" id="myImage" width="100px" height="100px">
+
+
+	<button onclick="document.getElementById('myImage').src='lightoff.jpg'">Turn off</button> <br>
+
+	<h2>Doing math by JS</h2>
+
+	<p id="demo2"></p>
+
+	<p id="demo3"></p>
+
+	<p id="demo4"></p>
+	
+	<button onclick= "displayDate()">This time is?</button> <br> <br>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+	<p id="demoo"></p>
+
+	<button onclick="document.getElementById('demo10').innerHTML = getRndInteger(0,10)">Click me</button>
+
+	<p id="demo10"></p>
+
+	<p id="demo11"></p>
+
+	<p id="demo13"></p>
+
+	<script>
+		var str = "Hridoy";
+		var txt = str.split("");
+		var sp = "";
+		var a;
+		for (a = 0; a < txt.length; a++) {
+			sp = sp + txt[a] + "<br>";
+		}
+
+		document.getElementById("demo").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+
+		document.getElementById("demoo").innerHTML = Math.floor(Math.random() * 20) + 1;
+
+		function getRndInteger(min,max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		var msec = Date.parse("March 21, 2015")
+		var d = new Date(msec);
+		document.getElementById("demo11").innerHTML = d;
+
+
+		var today, someday, text;
+		today = new Date();
+		someday = new Date();
+		someday.getFullYear(2019, 0, 14);
+
+		if (someday > today) {
+			text = "Today is before January 14, 2021";
+		}
+
+		else {
+			text = "Today is after January 14, 2021";
+		}
+
+		document.getElementById("demo13").innerHTML = text;
+	</script>
+</body>
+</html>

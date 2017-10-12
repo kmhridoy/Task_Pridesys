@@ -1,0 +1,44 @@
+.tophead {
+	height: 300px;
+	background-color: #FF0000;
+}
+
+.para1 {
+	font-size:12px;
+}
+
+input:focus {
+	outline: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid red;
+}
+
+input {
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: 1px solid gray;
+
+}
+
+.underline {
+	width: 50%;
+}
+
+.date_underline {
+	border: none;
+	width: 40%;
+	border-bottom: 1px solid gray;
+}
+
+.committe {
+	border: none;
+	width: 50%;
+}
+
+.comment {
+	height: 100px;
+	width: 50%
+}

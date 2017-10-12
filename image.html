@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image</title>
+
+	<style>
+		img:hover {
+			transform: scaleX(-1);
+		}
+
+		.button {
+  			display: inline-block;
+  			border-radius: 4px;
+  			background-color: #f4511e;
+  			border: none;
+  			color: #FFFFFF;
+  			text-align: center;
+  			font-size: 28px;
+  			padding: 20px;
+  			width: 200px;
+  			transition: all 0.5s;
+  			cursor: pointer;
+ 			margin: 5px;
+ 		}
+
+ 		.button span {
+  			cursor: pointer;
+  			display: inline-block;
+  			position: relative;
+  			transition: 0.5s;
+		}
+
+		.button span:after {
+			content: '\00bb';
+			opacity: absolute;
+			opacity: 0;
+  			top: 0;
+  			right: -20px;
+  			transition: 0.5s;
+
+		}
+
+		.button:hover span {
+			padding-right: 25px; 
+		}
+
+		.button:hover span:after {
+			opacity: 1;
+			right: 0;
+		}
+
+		.newspaper {
+			column-count:4;
+			column-rule-style: solid;
+			column-rule-width: 1px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<img src="img5.jpg" alt="tree" width="300" height="300"><br><br>
+
+	<h2>Animated Button</h2>
+	<button class="button"><span>Next </span></button> <br><br>
+
+	<h2>Column count</h2>
+	<div class="newspaper">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	</div>
+
+</body>
+</html>
